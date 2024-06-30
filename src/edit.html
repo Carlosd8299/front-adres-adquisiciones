@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Item</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-blue-100">
+    <div class="container mx-auto mt-10">
+        <div class="bg-white p-8 rounded shadow-md">
+            <h1 class="text-3xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-800">
+                Editar Adquisición
+            </h1>
+            <form id="editForm" class="mb-4">
+                <input type="hidden" id="itemId" value="">
+                <input type="text" id="editPresupuesto" class="border rounded p-2 mr-2 w-full mb-2" placeholder="Presupuesto" required>
+                <input type="text" id="editUnidad" class="border rounded p-2 mr-2 w-full mb-2" placeholder="Unidad" required>
+                <input type="text" id="editTipoBien" class="border rounded p-2 mr-2 w-full mb-2" placeholder="Tipo de Bien" required>
+                <input type="number" id="editCantidad" class="border rounded p-2 mr-2 w-full mb-2" placeholder="Cantidad" required>
+                <input type="number" step="0.01" id="editValorUnitario" class="border rounded p-2 mr-2 w-full mb-2" placeholder="Valor Unitario" required>
+                <input type="text" id="editValorTotal" class="border rounded p-2 mr-2 w-full mb-2" placeholder="Valor Total" required>
+                <input type="date" id="editFechaAdquisicion" class="border rounded p-2 mr-2 w-full mb-2" placeholder="Fecha de Adquisición" required>
+                <input type="text" id="editProveedor" class="border rounded p-2 mr-2 w-full mb-2" placeholder="Proveedor" required>
+                <input type="text" id="editDocumentacion" class="border rounded p-2 mr-2 w-full mb-2" placeholder="Documentación" required>
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Editar</button>
+            </form>
+            <button onclick="window.location.href='list.html'" class="bg-blue-500 text-white px-4 py-2 rounded">Cancelar</button>
+        </div>
+    </div>
+    <script src="edit.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

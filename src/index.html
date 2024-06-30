@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-blue-100">
+    <div class="container mx-auto mt-10">
+        <div class="bg-white p-8 rounded shadow-md">
+            <h1 class="text-3xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-800">
+                Adquisiciones Adres
+            </h1>
+
+            <button onclick="window.location.href='list.html'" class="bg-blue-500 text-white px-4 py-2 rounded my-3 ">Ver lista de adquisiciones</button>
+            
+            <h2 class="text-2xl my-3">Añadir nueva adquisicion</h2>
+
+            <form id="itemForm" class="mb-4">
+                <input type="text" id="presupuesto" class="border rounded p-2 mr-2 w-full mb-2" placeholder="Presupuesto" required>
+                <input type="text" id="unidad" class="border rounded p-2 mr-2 w-full mb-2" placeholder="Unidad" required>
+                <input type="text" id="tipoBien" class="border rounded p-2 mr-2 w-full mb-2" placeholder="Tipo de Bien" required>
+                <input type="number" id="cantidad" class="border rounded p-2 mr-2 w-full mb-2" placeholder="Cantidad" required>
+                <input type="number" step="0.01" id="valorUnitario" class="border rounded p-2 mr-2 w-full mb-2" placeholder="Valor Unitario" required>
+                <input type="date" id="fechaAdquisicion" class="border rounded p-2 mr-2 w-full mb-2" placeholder="Fecha de Adquisición" required>
+                <input type="text" id="proveedor" class="border rounded p-2 mr-2 w-full mb-2" placeholder="Proveedor" required>
+                <input type="text" id="documentacion" class="border rounded p-2 mr-2 w-full mb-2" placeholder="Documentación" required>
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Agregar</button>
+            </form>
+            
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
