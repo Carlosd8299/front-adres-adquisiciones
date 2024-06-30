@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const dateForm = document.getElementById('dateForm');
     const logDate = document.getElementById('logDate');
 
+    // Set default date to today
+    const today = new Date().toISOString().split('T')[0];
+    logDate.value = today;
+
     dateForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const selectedDate = logDate.value;
@@ -12,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
             await fetchLogs(formattedDate);
         }
     });
-
     async function fetchLogs(date) {
         try {
             const response = await fetch(`https://adresadquisitionapi20240629195845.azurewebsites.net/api/Log/${date}`, {
