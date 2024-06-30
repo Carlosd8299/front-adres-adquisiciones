@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-blue-100">
+    <div class="container mx-auto mt-10">
+        <div class="bg-white p-8 rounded shadow-md">
+            <h1 class="text-3xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-800">
+                Log Data
+            </h1>
+            <button onclick="window.location.href='index.html'" class="bg-blue-500 text-white px-4 py-2 rounded mb-4">Regresar</button>
+            <form id="dateForm" class="mb-4">
+                <input type="date" id="logDate" class="border rounded p-2 mr-2 mb-2" required>
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Historico de logs</button>
+            </form>
+            <table class="table-auto w-full">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-2">Fecha</th>
+                        <th class="px-4 py-2">Peticion</th>
+                        <th class="px-4 py-2">Usuario</th>
+                        <th class="px-4 py-2">Evento</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="logList">
+                    <!-- Logs will be appended here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="log.js"></script>
+</body>
+</html>
